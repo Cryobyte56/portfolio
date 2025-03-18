@@ -8,6 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.jsdelivr.net/npm/preline@2.0.0/dist/preline.min.js"></script>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+
   <title>Portfolio</title>
 
   <style>
@@ -25,7 +28,7 @@
 
     .nav-link.active {
       font-weight: bold;
-      color: rgb(34, 197, 94);
+      color: #35df79;
       text-decoration: underline;
       text-underline-offset: 4px;
     }
@@ -49,11 +52,11 @@
 <body class="bg-black text-white">
   <header
     class="sticky top-0 z-50 flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-black text-sm py-5 dark:bg-neutral-800 shadow-md">
-    <nav class="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between">
+    <nav class="max-w-[85rem] w-full mx-auto sm:flex sm:items-center sm:justify-between">
       <div class="flex items-center justify-between">
         <a class="flex-none text-xl font-semibold dark:text-white focus:outline-hidden focus:opacity-80"
           href="#introduction" aria-label="Brand">
-          <h3 class="font-bold text-green-500 hover:text-green-600">Daniel.</h3>
+          <h3 class="font-bold hover:text-primary">Daniel.</h3>
         </a>
         <div class="sm:hidden">
           <button type="button"
@@ -81,29 +84,344 @@
         class="hidden hs-collapse overflow-hidden transition-all duration-300 basis-full grow sm:block"
         aria-labelledby="hs-navbar-example-collapse">
         <div class="flex flex-col gap-8 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5">
-          <a class="nav-link font-medium text-white hover:text-green-500" href="#introduction">About Me</a>
-          <a class="nav-link font-medium text-white hover:text-green-500" href="#skills">Skills</a>
-          <a class="nav-link font-medium text-white hover:text-green-500" href="#projects">Projects</a>
-          <a class="nav-link font-medium text-white hover:text-green-500" href="#certification">Certifications</a>
-          <a class="nav-link font-medium text-white hover:text-green-500" href="#experience">Experience</a>
-          <a class="nav-link font-medium text-white hover:text-green-500" href="#contact">Contact Me</a>
+          <a class="nav-link font-medium text-white hover:text-primary" href="#introduction">About Me</a>
+          <a class="nav-link font-medium text-white hover:text-primary" href="#skills">Skills</a>
+          <a class="nav-link font-medium text-white hover:text-primary" href="#projects">Projects</a>
+          <a class="nav-link font-medium text-white hover:text-primary" href="#certification">Certifications</a>
+          <a class="nav-link font-medium text-white hover:text-primary" href="#experience">Experience</a>
+          <a class="nav-link font-medium text-white hover:text-primary" href="#contact">Contact Me</a>
         </div>
       </div>
     </nav>
   </header>
 
   <div class="p-[6rem]">
+
     <!-- About Me and Social Links -->
-    <section id="introduction" class="h-screen py-[6rem] fade-in-section">
-      <h2 class="font-bold text-6xl">TECH STACKS</h2>
-      <p class="text-gray-300">This section will fade in from the bottom when scrolled into view.</p>
+    <section id="introduction" class="flex flex-col h-screen py-[6rem] fade-in-section">
+      <h2 class="font-bold text-8xl">Hi! I'm <span class=" text-primary">Daniel</span></h2>
+      <p class="text-gray-300 font-medium text-xl mt-2">ASPIRING SOFTWARE ENGINEER</p>
+
+      <p class="w-1/2 font-light mt-5">I'm from the Philippines with a strong passion for intelligent systems and
+        software development. I specialize in
+        creating innovative solutions that address real-world challenges and business needs. Continuously exploring
+        emerging
+        technologies, I strive to expand my expertise across various development domains. Let's collaborate and build
+        impactful
+        solutions together.</p>
     </section>
 
     <!-- Tech Stack -->
-    <section class="h-screen py-[6rem] fade-in-section" id="skills">
-      <h2 class="font-bold text-6xl">TECH STACKS</h2>
-      <p class="text-gray-300">This section will fade in from the bottom when scrolled into view.</p>
+    <section class="flex flex-col h-screen py-[6rem] fade-in-section" id="skills">
+      <h2 class="font-bold text-6xl">TECH <span class=" text-primary">STACKS</span></h2>
+      <p class="text-gray-300 font-medium mt-2">The Following are the Ones That I Use and Familiar With:</p>
+
+      <!-- Logos -->
+      <div class="flex flex-wrap gap-16 mt-[6rem] text-center">
+
+        <!-- HTML -->
+        <div class="group relative flex flex-col items-center">
+          <img src="https://cdn.simpleicons.org/html5" alt="HTML Logo" width="120"
+            class="transition-transform duration-300 group-hover:-translate-y-3">
+
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            HTML 5
+          </p>
+        </div>
+
+        <!-- CSS 3 -->
+        <div class="group relative flex flex-col items-center">
+          <img src="https://cdn.simpleicons.org/css3" alt="CSS 3 Logo" width="120"
+            class="transition-transform duration-300 group-hover:-translate-y-3">
+
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            CSS 3
+          </p>
+        </div>
+
+        <!-- JS -->
+        <div class="group relative flex flex-col items-center">
+          <img src="https://cdn.simpleicons.org/javascript" alt="JavaScript Logo" width="120"
+            class="transition-transform duration-300 group-hover:-translate-y-3">
+
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            JavaScript
+          </p>
+        </div>
+
+        <!-- Bootstrap -->
+        <div class="group relative flex flex-col items-center">
+          <img src="https://cdn.simpleicons.org/bootstrap" alt="Bootstrap Logo" width="120"
+            class="transition-transform duration-300 group-hover:-translate-y-3">
+
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            Bootstrap
+          </p>
+        </div>
+
+        <!-- Tailwind -->
+        <div class="group relative flex flex-col items-center">
+          <img src="https://cdn.simpleicons.org/tailwindcss" alt="Tailwind CSS Logo" width="120"
+            class="transition-transform duration-300 group-hover:-translate-y-3">
+
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            Tailwind CSS
+          </p>
+        </div>
+
+        <!-- Laravel -->
+        <div class="group relative flex flex-col items-center">
+          <img src="https://cdn.simpleicons.org/laravel" alt="Laravel Logo" width="120"
+            class="transition-transform duration-300 group-hover:-translate-y-3">
+
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            Laravel
+          </p>
+        </div>
+
+        <!-- C# -->
+        <div class="group relative flex flex-col items-center">
+          <img src="https://static-00.iconduck.com/assets.00/c-sharp-c-icon-1822x2048-wuf3ijab.png" alt="C# Logo" width="120"
+            class="transition-transform duration-300 group-hover:-translate-y-3">
+        
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            C#
+          </p>
+        </div>
+
+        <!-- Render -->
+        <div class="group relative flex flex-col items-center">
+          <img src="https://cdn.simpleicons.org/render/ffffff" alt="Render Logo" width="120"
+            class="transition-transform duration-300 group-hover:-translate-y-3">
+        
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            Render
+          </p>
+        </div>
+
+        <!-- Vercel -->
+        <div class="group relative flex flex-col items-center">
+          <img src="https://cdn.simpleicons.org/vercel/ffffff" alt="Vercel Logo" width="120"
+            class="transition-transform duration-300 group-hover:-translate-y-3">
+        
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            Vercel
+          </p>
+        </div>
+
+        <!-- Java -->
+        <div class="group relative flex flex-col items-center">
+          <img src="https://static-00.iconduck.com/assets.00/java-icon-1511x2048-6ikx8301.png" alt="Java Logo" width="85"
+            class="transition-transform duration-300 group-hover:-translate-y-3">
+        
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            Java
+          </p>
+        </div>
+
+        <!-- PHP -->
+        <div class="group relative flex flex-col items-center">
+          <img src="https://cdn.simpleicons.org/php" alt="PHP Logo" width="120"
+            class="transition-transform duration-300 group-hover:-translate-y-3">
+        
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            PHP
+          </p>
+        </div>
+
+        <!-- Python -->
+        <div class="group relative flex flex-col items-center">
+          <img src="https://img.icons8.com/color/512/python.png" alt="Python Logo" width="120"
+            class="transition-transform duration-300 group-hover:-translate-y-3">
+        
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            Python
+          </p>
+        </div>
+
+        <!-- Chart JS -->
+        <div class="group relative flex flex-col items-center">
+          <img src="https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/1/chartjs-gbwxkdn5urp4w5jg9xk4g5.png/chartjs-p7803bgd17hc5uxtz82i.png?_a=DAJFJtWIZAAC" alt="Chart JS Logo" width="120"
+            class="transition-transform duration-300 group-hover:-translate-y-3">
+        
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            Chart JS
+          </p>
+        </div>
+
+        <!-- Node JS -->
+        <div class="group relative flex flex-col items-center">
+          <img src="https://cdn-icons-png.flaticon.com/512/919/919825.png" alt="Node JS Logo" width="120"
+            class="transition-transform duration-300 group-hover:-translate-y-3">
+        
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            Node JS
+          </p>
+        </div>
+
+        <!-- Express JS -->
+        <div class="group relative flex flex-col items-center">
+          <img src="https://cdn.simpleicons.org/express/ffffff" alt="Express JS Logo" width="120"
+            class="transition-transform duration-300 group-hover:-translate-y-3">
+        
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            Express JS
+          </p>
+        </div>
+
+        <!-- React JS -->
+        <div class="group relative flex flex-col items-center">
+          <img src="https://cdn.simpleicons.org/react" alt="React JS Logo" width="120"
+            class="transition-transform duration-300 group-hover:-translate-y-3">
+        
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            React JS
+          </p>
+        </div>
+
+        <!-- Vite -->
+        <div class="group relative flex flex-col items-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Vitejs-logo.svg" alt="Vite Logo" width="120"
+            class="transition-transform duration-300 group-hover:-translate-y-3">
+        
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            Vite
+          </p>
+        </div>
+
+        <!-- Apache -->
+        <div class="group relative flex flex-col items-center">
+          <img src="https://cdn.simpleicons.org/apache" alt="Apache Logo" width="120"
+            class="transition-transform duration-300 group-hover:-translate-y-3">
+        
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            Apache
+          </p>
+        </div>
+
+        <!-- MySQL Workbench -->
+        <div class="group relative flex flex-col items-center">
+          <img src="https://images.icon-icons.com/1381/PNG/512/mysqlworkbench_93532.png" alt="MySQL Workbench Logo" width="120"
+            class="transition-transform duration-300 group-hover:-translate-y-3">
+        
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            MySQL Workbench
+          </p>
+        </div>
+
+        <!-- MongoDB -->
+        <div class="group relative flex flex-col items-center">
+          <img src="https://cdn.simpleicons.org/mongodb" alt="MongoDB Logo" width="120"
+            class="transition-transform duration-300 group-hover:-translate-y-3">
+        
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            MongoDB
+          </p>
+        </div>
+
+        <!-- Adobe XD -->
+        <div class="group relative flex flex-col items-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Adobe_XD_CC_icon.svg/512px-Adobe_XD_CC_icon.svg.png" alt="Adobe XD Logo" width="120"
+            class="transition-transform duration-300 group-hover:-translate-y-3">
+        
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            Adobe XD
+          </p>
+        </div>
+
+        <!-- Adobe Lightroom -->
+        <div class="group relative flex flex-col items-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Adobe_Photoshop_Lightroom_CC_logo.svg/2101px-Adobe_Photoshop_Lightroom_CC_logo.svg.png" alt="Adobe Lightroom Logo" width="120"
+            class="transition-transform duration-300 group-hover:-translate-y-3">
+        
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            Adobe Lightroom
+          </p>
+        </div>
+
+        <!-- Canva -->
+        <div class="group relative flex flex-col items-center">
+          <img src="https://static.vecteezy.com/system/resources/previews/032/329/173/non_2x/canva-icon-logo-symbol-free-png.png" alt="Canva Logo" width="120"
+            class="transition-transform duration-300 group-hover:-translate-y-3">
+        
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            Canva
+          </p>
+        </div>
+
+        <!-- Dribbble -->
+        <div class="group relative flex flex-col items-center">
+          <img
+            src="https://cdn0.iconfinder.com/data/icons/social-flat-rounded-rects/512/dribbble-512.png"
+            alt="Dribbble Logo" width="120" class="transition-transform duration-300 group-hover:-translate-y-3">
+        
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            Dribbble
+          </p>
+        </div>
+
+        <!-- Figma -->
+        <div class="group relative flex flex-col items-center">
+          <img
+            src="https://static-00.iconduck.com/assets.00/apps-figma-icon-2048x2048-ctjj5ab7.png"
+            alt="Figma Logo" width="120" class="transition-transform duration-300 group-hover:-translate-y-3">
+        
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            Figma
+          </p>
+        </div>
+
+        <!-- Git -->
+        <div class="group relative flex flex-col items-center">
+          <img src="https://cdn.simpleicons.org/git" alt="Git Logo" width="120"
+            class="transition-transform duration-300 group-hover:-translate-y-3">
+        
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            Git
+          </p>
+        </div>
+
+        <!-- Github -->
+        <div class="group relative flex flex-col items-center">
+          <img src="https://cdn.simpleicons.org/github/ffffff" alt="Github Logo" width="120"
+            class="transition-transform duration-300 group-hover:-translate-y-3">
+        
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            Github
+          </p>
+        </div>
+
+      </div>
+
     </section>
+
     <section class="h-screen fade-in-section" id="projects"></section>
     <section class="h-screen fade-in-section" id="certification"></section>
     <section class="h-screen fade-in-section" id="experience"></section>
