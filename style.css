@@ -9,8 +9,8 @@ body {
 
 /* Gradient Blob */
 :root {
-  --blob-color: linear-gradient(to right, #bfff00, rgb(0, 255, 81));
-  --blob-size: 300px;
+  --blob-color: linear-gradient(to right, #eaff00, rgb(0, 255, 81));
+  --blob-size: 400px;
 }
 
 #blob {
@@ -73,6 +73,8 @@ body {
   z-index: 2;
   backdrop-filter: blur;
 }
+
+
 
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
