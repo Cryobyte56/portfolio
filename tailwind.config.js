@@ -5,7 +5,22 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#35df79",
+        primary: "#8cff00",
+      },
+      animation: {
+        text: "text 2s ease infinite",
+      },
+      keyframes: {
+        text: {
+          "0%, 100%": {
+            "background-size": "200% 200%",
+            "background-position": "left center",
+          },
+          "50%": {
+            "background-size": "200% 200%",
+            "background-position": "right center",
+          },
+        },
       },
     },
   },

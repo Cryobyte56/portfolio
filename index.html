@@ -4,59 +4,44 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/src/logo.ico" />
-  <link rel="stylesheet" href="/src/index.css" />
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.jsdelivr.net/npm/preline@2.0.0/dist/preline.min.js"></script>
 
+  <!-- JS -->
+  <script src="javascripts/header_script.js"></script>
+  <script src="javascripts/typing_animation.js"></script>
+  
+  <!-- Styling -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/src/index.css" />
+
+
+  <!-- CDNs -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 
   <title>Portfolio</title>
 
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-    body {
-      font-family: "Poppins", sans-serif;
-      font-weight: 100;
-      font-style: normal;
-    }
-
-    .nav-link {
-      transition: color 0.3s;
-    }
-
-    .nav-link.active {
-      font-weight: bold;
-      color: #35df79;
-      text-decoration: underline;
-      text-underline-offset: 4px;
-    }
-
-    .fade-in-section {
-      opacity: 0;
-      transform: translateY(10px);
-      transition: opacity 0.7s, transform 0.7s;
-    }
-
-    .fade-in-section.opacity-100 {
-      opacity: 1;
-    }
-
-    .fade-in-section.translate-y-0 {
-      transform: translateY(0);
-    }
-  </style>
 </head>
 
 <body class="bg-black text-white">
+
   <header
     class="sticky top-0 z-50 flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-black text-sm py-5 dark:bg-neutral-800 shadow-md">
     <nav class="max-w-[85rem] w-full mx-auto sm:flex sm:items-center sm:justify-between">
       <div class="flex items-center justify-between">
         <a class="flex-none text-xl font-semibold dark:text-white focus:outline-hidden focus:opacity-80"
           href="#introduction" aria-label="Brand">
-          <h3 class="font-bold hover:text-primary">Daniel.</h3>
+          <h3 class="font-bold text-white transition-colors duration-300 relative group">
+            Daniel.
+            <span
+              class="absolute inset-0 bg-clip-text text-transparent bg-gradient-to-r from-lime-300 to-green-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              Daniel.
+            </span>
+          </h3>
         </a>
         <div class="sm:hidden">
           <button type="button"
@@ -95,20 +80,70 @@
     </nav>
   </header>
 
+  <!-- Main Container -->
   <div class="p-[6rem]">
 
     <!-- About Me and Social Links -->
-    <section id="introduction" class="flex flex-col h-screen py-[6rem] fade-in-section">
-      <h2 class="font-bold text-8xl">Hi! I'm <span class=" text-primary">Daniel</span></h2>
-      <p class="text-gray-300 font-medium text-xl mt-2">ASPIRING SOFTWARE ENGINEER</p>
+    <section id="introduction" class="flex">
 
-      <p class="w-1/2 font-light mt-5">I'm from the Philippines with a strong passion for intelligent systems and
-        software development. I specialize in
-        creating innovative solutions that address real-world challenges and business needs. Continuously exploring
-        emerging
-        technologies, I strive to expand my expertise across various development domains. Let's collaborate and build
-        impactful
-        solutions together.</p>
+      <!-- Right Side (Blob) -->
+      <div class="blob-container">
+        <div id="blob"></div>
+        <div id="blob-blur"></div>
+      </div>
+
+      <!-- Left Side -->
+      <div class="flex flex-col justify-start h-screen py-[6rem] fade-in-section">
+        <h2 class="font-bold text-8xl">
+          Hi! I'm
+          <span class="text-transparent bg-gradient-to-r bg-clip-text 
+            from-primary via-lime-500 to-yellow-300
+            animate-text cursor-pointer">
+            Daniel
+          </span>
+        </h2>
+
+        <!-- Goal Title/Title -->
+        <p class="text-gray-300 font-medium text-xl mt-2">ASPIRING SOFTWARE ENGINEER</p>
+
+        <!-- Typewriting Part -->
+        <h1>
+          <a href="" class="typewrite text-transparent bg-gradient-to-r bg-clip-text 
+            from-yellow-500 via-lime-500 to-yellow-300 animate-text font-medium" data-period="1000"
+            data-type='[ "Bug Finder or the Bug Will Find Me.", "I_am_Creative ? Maybe : No.", "I Like Designing.", "Mastering Software Development.", "Problem Solver.", "GPT My Friend." ]'>
+            <span class="wrap"></span>
+          </a>
+        </h1>
+
+        <!-- About Me -->
+        <div class="description">
+          <p class="w-1/2 font-light mt-8">I'm from the Philippines with a strong passion for intelligent systems and
+            software development. I specialize in
+            creating innovative solutions that address real-world challenges and business needs. Continuously exploring
+            emerging
+            technologies, I strive to expand my expertise across various development domains. Additionally, I lead as
+            the
+            Project Manager on several software projects in my college days. Let's collaborate and build
+            impactful
+            solutions together.</p>
+        </div>
+
+        <!-- Social Links -->
+        <div class="social flex mt-[10rem]">
+          <ul>
+            <li>
+              <a href="https://www.linkedin.com/in/daniel-valdez-5170a125a/">
+                <i class="fab fa-linkedin icon"></i> </a>
+            </li>
+            <li>
+              <a href="https://github.com/Cryobyte56"><i class="fab fa-github icon"></i></a>
+            </li>
+            <li>
+              <a href="https://www.behance.net/daniel_valdez"><i class="fab fa-behance icon"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <!-- Tech Stack -->
@@ -187,9 +222,9 @@
 
         <!-- C# -->
         <div class="group relative flex flex-col items-center">
-          <img src="https://static-00.iconduck.com/assets.00/c-sharp-c-icon-1822x2048-wuf3ijab.png" alt="C# Logo" width="120"
-            class="transition-transform duration-300 group-hover:-translate-y-3">
-        
+          <img src="https://static-00.iconduck.com/assets.00/c-sharp-c-icon-1822x2048-wuf3ijab.png" alt="C# Logo"
+            width="120" class="transition-transform duration-300 group-hover:-translate-y-3">
+
           <p
             class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
             C#
@@ -200,7 +235,7 @@
         <div class="group relative flex flex-col items-center">
           <img src="https://cdn.simpleicons.org/render/ffffff" alt="Render Logo" width="120"
             class="transition-transform duration-300 group-hover:-translate-y-3">
-        
+
           <p
             class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
             Render
@@ -211,7 +246,7 @@
         <div class="group relative flex flex-col items-center">
           <img src="https://cdn.simpleicons.org/vercel/ffffff" alt="Vercel Logo" width="120"
             class="transition-transform duration-300 group-hover:-translate-y-3">
-        
+
           <p
             class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
             Vercel
@@ -220,9 +255,9 @@
 
         <!-- Java -->
         <div class="group relative flex flex-col items-center">
-          <img src="https://static-00.iconduck.com/assets.00/java-icon-1511x2048-6ikx8301.png" alt="Java Logo" width="85"
-            class="transition-transform duration-300 group-hover:-translate-y-3">
-        
+          <img src="https://static-00.iconduck.com/assets.00/java-icon-1511x2048-6ikx8301.png" alt="Java Logo"
+            width="85" class="transition-transform duration-300 group-hover:-translate-y-3">
+
           <p
             class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
             Java
@@ -233,7 +268,7 @@
         <div class="group relative flex flex-col items-center">
           <img src="https://cdn.simpleicons.org/php" alt="PHP Logo" width="120"
             class="transition-transform duration-300 group-hover:-translate-y-3">
-        
+
           <p
             class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
             PHP
@@ -244,7 +279,7 @@
         <div class="group relative flex flex-col items-center">
           <img src="https://img.icons8.com/color/512/python.png" alt="Python Logo" width="120"
             class="transition-transform duration-300 group-hover:-translate-y-3">
-        
+
           <p
             class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
             Python
@@ -253,9 +288,10 @@
 
         <!-- Chart JS -->
         <div class="group relative flex flex-col items-center">
-          <img src="https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/1/chartjs-gbwxkdn5urp4w5jg9xk4g5.png/chartjs-p7803bgd17hc5uxtz82i.png?_a=DAJFJtWIZAAC" alt="Chart JS Logo" width="120"
-            class="transition-transform duration-300 group-hover:-translate-y-3">
-        
+          <img
+            src="https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/1/chartjs-gbwxkdn5urp4w5jg9xk4g5.png/chartjs-p7803bgd17hc5uxtz82i.png?_a=DAJFJtWIZAAC"
+            alt="Chart JS Logo" width="120" class="transition-transform duration-300 group-hover:-translate-y-3">
+
           <p
             class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
             Chart JS
@@ -266,7 +302,7 @@
         <div class="group relative flex flex-col items-center">
           <img src="https://cdn-icons-png.flaticon.com/512/919/919825.png" alt="Node JS Logo" width="120"
             class="transition-transform duration-300 group-hover:-translate-y-3">
-        
+
           <p
             class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
             Node JS
@@ -277,7 +313,7 @@
         <div class="group relative flex flex-col items-center">
           <img src="https://cdn.simpleicons.org/express/ffffff" alt="Express JS Logo" width="120"
             class="transition-transform duration-300 group-hover:-translate-y-3">
-        
+
           <p
             class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
             Express JS
@@ -288,7 +324,7 @@
         <div class="group relative flex flex-col items-center">
           <img src="https://cdn.simpleicons.org/react" alt="React JS Logo" width="120"
             class="transition-transform duration-300 group-hover:-translate-y-3">
-        
+
           <p
             class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
             React JS
@@ -299,7 +335,7 @@
         <div class="group relative flex flex-col items-center">
           <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Vitejs-logo.svg" alt="Vite Logo" width="120"
             class="transition-transform duration-300 group-hover:-translate-y-3">
-        
+
           <p
             class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
             Vite
@@ -310,7 +346,7 @@
         <div class="group relative flex flex-col items-center">
           <img src="https://cdn.simpleicons.org/apache" alt="Apache Logo" width="120"
             class="transition-transform duration-300 group-hover:-translate-y-3">
-        
+
           <p
             class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
             Apache
@@ -319,9 +355,9 @@
 
         <!-- MySQL Workbench -->
         <div class="group relative flex flex-col items-center">
-          <img src="https://images.icon-icons.com/1381/PNG/512/mysqlworkbench_93532.png" alt="MySQL Workbench Logo" width="120"
-            class="transition-transform duration-300 group-hover:-translate-y-3">
-        
+          <img src="https://images.icon-icons.com/1381/PNG/512/mysqlworkbench_93532.png" alt="MySQL Workbench Logo"
+            width="120" class="transition-transform duration-300 group-hover:-translate-y-3">
+
           <p
             class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
             MySQL Workbench
@@ -332,7 +368,7 @@
         <div class="group relative flex flex-col items-center">
           <img src="https://cdn.simpleicons.org/mongodb" alt="MongoDB Logo" width="120"
             class="transition-transform duration-300 group-hover:-translate-y-3">
-        
+
           <p
             class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
             MongoDB
@@ -341,9 +377,10 @@
 
         <!-- Adobe XD -->
         <div class="group relative flex flex-col items-center">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Adobe_XD_CC_icon.svg/512px-Adobe_XD_CC_icon.svg.png" alt="Adobe XD Logo" width="120"
-            class="transition-transform duration-300 group-hover:-translate-y-3">
-        
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Adobe_XD_CC_icon.svg/512px-Adobe_XD_CC_icon.svg.png"
+            alt="Adobe XD Logo" width="120" class="transition-transform duration-300 group-hover:-translate-y-3">
+
           <p
             class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
             Adobe XD
@@ -352,9 +389,10 @@
 
         <!-- Adobe Lightroom -->
         <div class="group relative flex flex-col items-center">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Adobe_Photoshop_Lightroom_CC_logo.svg/2101px-Adobe_Photoshop_Lightroom_CC_logo.svg.png" alt="Adobe Lightroom Logo" width="120"
-            class="transition-transform duration-300 group-hover:-translate-y-3">
-        
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Adobe_Photoshop_Lightroom_CC_logo.svg/2101px-Adobe_Photoshop_Lightroom_CC_logo.svg.png"
+            alt="Adobe Lightroom Logo" width="120" class="transition-transform duration-300 group-hover:-translate-y-3">
+
           <p
             class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
             Adobe Lightroom
@@ -363,9 +401,10 @@
 
         <!-- Canva -->
         <div class="group relative flex flex-col items-center">
-          <img src="https://static.vecteezy.com/system/resources/previews/032/329/173/non_2x/canva-icon-logo-symbol-free-png.png" alt="Canva Logo" width="120"
-            class="transition-transform duration-300 group-hover:-translate-y-3">
-        
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/032/329/173/non_2x/canva-icon-logo-symbol-free-png.png"
+            alt="Canva Logo" width="120" class="transition-transform duration-300 group-hover:-translate-y-3">
+
           <p
             class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
             Canva
@@ -374,10 +413,9 @@
 
         <!-- Dribbble -->
         <div class="group relative flex flex-col items-center">
-          <img
-            src="https://cdn0.iconfinder.com/data/icons/social-flat-rounded-rects/512/dribbble-512.png"
+          <img src="https://cdn0.iconfinder.com/data/icons/social-flat-rounded-rects/512/dribbble-512.png"
             alt="Dribbble Logo" width="120" class="transition-transform duration-300 group-hover:-translate-y-3">
-        
+
           <p
             class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
             Dribbble
@@ -386,10 +424,9 @@
 
         <!-- Figma -->
         <div class="group relative flex flex-col items-center">
-          <img
-            src="https://static-00.iconduck.com/assets.00/apps-figma-icon-2048x2048-ctjj5ab7.png"
-            alt="Figma Logo" width="120" class="transition-transform duration-300 group-hover:-translate-y-3">
-        
+          <img src="https://static-00.iconduck.com/assets.00/apps-figma-icon-2048x2048-ctjj5ab7.png" alt="Figma Logo"
+            width="120" class="transition-transform duration-300 group-hover:-translate-y-3">
+
           <p
             class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
             Figma
@@ -400,7 +437,7 @@
         <div class="group relative flex flex-col items-center">
           <img src="https://cdn.simpleicons.org/git" alt="Git Logo" width="120"
             class="transition-transform duration-300 group-hover:-translate-y-3">
-        
+
           <p
             class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
             Git
@@ -411,10 +448,115 @@
         <div class="group relative flex flex-col items-center">
           <img src="https://cdn.simpleicons.org/github/ffffff" alt="Github Logo" width="120"
             class="transition-transform duration-300 group-hover:-translate-y-3">
-        
+
           <p
             class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
             Github
+          </p>
+        </div>
+
+        <!-- Postman -->
+        <div class="group relative flex flex-col items-center">
+          <img src="https://cdn.simpleicons.org/postman" alt="Postman Logo" width="120"
+            class="transition-transform duration-300 group-hover:-translate-y-3">
+
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            Postman
+          </p>
+        </div>
+
+        <!-- Power BI -->
+        <div class="group relative flex flex-col items-center">
+          <img src="https://img.icons8.com/?size=512&id=qYfwpsRXEcpc&format=png" alt="Power BI Logo" width="120"
+            class="transition-transform duration-300 group-hover:-translate-y-3">
+
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            Power BI
+          </p>
+        </div>
+
+        <!-- Looker Studio -->
+        <div class="group relative flex flex-col items-center">
+          <img src="https://cdn.simpleicons.org/looker" alt="Looker Studio Logo" width="120"
+            class="transition-transform duration-300 group-hover:-translate-y-3">
+
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            Looker Studio
+          </p>
+        </div>
+
+        <!-- Google Cloud -->
+        <div class="group relative flex flex-col items-center">
+          <img src="https://static-00.iconduck.com/assets.00/google-cloud-icon-2048x1646-7admxejz.png"
+            alt="Google Cloud Logo" width="120" class="transition-transform duration-300 group-hover:-translate-y-3">
+
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            Google Cloud
+          </p>
+        </div>
+
+        <!-- Google Apps Script -->
+        <div class="group relative flex flex-col items-center">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_Apps_Script.svg/2048px-Google_Apps_Script.svg.png"
+            alt="Google Apps Script Logo" width="120"
+            class="transition-transform duration-300 group-hover:-translate-y-3">
+
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            Google Apps Script
+          </p>
+        </div>
+
+        <!-- Laravel Dusk -->
+        <div class="group relative flex flex-col items-center">
+          <img
+            src="https://uploads.sitepoint.com/wp-content/uploads/2017/02/1487161273Screenshot-2017-02-15-12.57.35.png"
+            alt="Laravel Dusk Logo" width="120"
+            class="transition-transform duration-300 group-hover:-translate-y-3 rounded-xl">
+
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            Laravel Dusk
+          </p>
+        </div>
+
+        <!-- ChatGPT -->
+        <div class="group relative flex flex-col items-center">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/2048px-ChatGPT_logo.svg.png"
+            alt="ChatGPT Logo" width="120" class="transition-transform duration-300 group-hover:-translate-y-3">
+
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            ChatGPT
+          </p>
+        </div>
+
+        <!-- Copilot -->
+        <div class="group relative flex flex-col items-center">
+          <img src="https://brandlogo.org/wp-content/uploads/2024/04/Microsoft-Copilot-Logo.png.webp" alt="Copilot Logo"
+            width="120" class="transition-transform duration-300 group-hover:-translate-y-3">
+
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            Copilot
+          </p>
+        </div>
+
+        <!-- Gemini -->
+        <div class="group relative flex flex-col items-center">
+          <img
+            src="https://cdn.freelogovectors.net/wp-content/uploads/2024/02/gemini_logo-chatbot-freelogovectors.net_.png"
+            alt="Gemini Logo" width="120" class="transition-transform duration-300 group-hover:-translate-y-3">
+
+          <p
+            class="absolute top-full opacity-0 text-white text-sm font-medium transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-2">
+            Gemini
           </p>
         </div>
 
@@ -422,71 +564,17 @@
 
     </section>
 
+    <!-- Projects -->
     <section class="h-screen fade-in-section" id="projects"></section>
     <section class="h-screen fade-in-section" id="certification"></section>
     <section class="h-screen fade-in-section" id="experience"></section>
     <section class="h-screen fade-in-section" id="contact"></section>
   </div>
 
-  <!-- Section Detection -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const sections = document.querySelectorAll("section");
-      const navLinks = document.querySelectorAll(".nav-link");
 
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              // Remove active class from all links
-              navLinks.forEach((link) => link.classList.remove("active"));
-
-              // Find the corresponding nav link and add the active class
-              const activeLink = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
-              if (activeLink) {
-                activeLink.classList.add("active");
-              }
-            }
-          });
-        },
-        { threshold: 0.6 } // 60% of the section must be visible
-      );
-
-      sections.forEach((section) => observer.observe(section));
-
-      // Scroll Animation for Fade-in Sections
-      const fadeSections = document.querySelectorAll(".fade-in-section");
-
-      const fadeObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("opacity-100", "translate-y-0");
-              entry.target.classList.remove("opacity-0", "translate-y-10");
-            }
-          });
-        },
-        { threshold: 0.2 } // Trigger when 20% of the section is visible
-      );
-
-      fadeSections.forEach((section) => fadeObserver.observe(section));
-
-      // Smooth Scrolling on Navbar Click
-      navLinks.forEach(link => {
-        link.addEventListener("click", (e) => {
-          e.preventDefault(); // Prevent default anchor jump
-          const targetId = link.getAttribute("href").substring(1); // Remove #
-          const targetSection = document.getElementById(targetId);
-
-          if (targetSection) {
-            targetSection.scrollIntoView({ behavior: "smooth" });
-          }
-        });
-      });
-    });
-  </script>
 
   <script src="./assets/vendor/preline/dist/preline.js"></script>
+
 </body>
 
 </html>

@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+/* Gradient Blob */
+:root {
+	--blob-color: linear-gradient(
+		to right,
+		#0dff00,
+		rgb(179, 255, 0)
+	);
+	--blob-size: 400px;
+}
+
+#blob {
+	animation: rotate360 20s infinite;
+	background: var(--blob-color);
+	filter: blur(calc(var(--blob-size)/2.15));
+	
+	width: var(--blob-size);
+	height: var(--blob-size);
+	position: absolute;
+	left: 75%;
+	top: 50%;
+	translate: -50% -50%;
+	border-radius: 50%;
+}
+
+@keyframes rotate360 {
+	from { rotate: 0deg; }
+	50% { scale: 1 1.15; }
+	to { rotate: 360deg; }
+}
+
+#blob-blur {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 2;
+	backdrop-filter: blur;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #d1d1d1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Header */
+.nav-link {
+  transition: color 0.3s;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: #8cff00;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.7s, transform 0.7s;
+}
+
+.fade-in-section.opacity-100 {
+  opacity: 1;
+}
+
+.fade-in-section.translate-y-0 {
+  transform: translateY(0);
+}
+
+/* For Social Icons */
+.social ul {
+  display: flex;
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: none;
+}
+
+.social ul li {
+  list-style: none;
+}
+
+.social ul li a {
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 80px;
+  font-size: 35px;
+  margin: 0 10px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #8cff00;
+  z-index: 1;
+}
+
+.social ul li a .icon {
+  position: relative;
+  color: #262626;
+  transition: 0.5s;
+  z-index: 3;
+}
+
+.social ul li a:hover .icon {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+.social ul li a:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.social ul li a:hover:before {
+  top: 0;
+}
+
+/* Linkedin */
+.social ul li:nth-child(1) a:before {
+  background: #0077b5;
+}
+
+/* Github */
+.social ul li:nth-child(2) a:before {
+  background: #24292e;
+}
+
+/* Behance */
+.social ul li:nth-child(3) a:before {
+  background: #053eff;
+}
