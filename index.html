@@ -25,39 +25,41 @@
 </head>
 
 <body class="bg-black text-white">
-  <header
-    class="sticky top-0 z-50 flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-black text-sm py-5 shadow-md px-5">
-    <nav class="max-w-[85rem] w-full mx-auto sm:flex sm:items-center sm:justify-between">
-      <div class="flex items-center justify-between">
-        <div class="flex items-center text-xl font-semibold focus:outline-hidden focus:opacity-80">
 
+  <!-- Header Navbar -->
+  <header class="sticky top-0 z-50 flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-black text-sm py-5 shadow-md">
+    <nav class="max-w-[85rem] w-full mx-auto sm:flex sm:items-center sm:justify-between">
+      <div class="flex items-center justify-between px-5">
+        <div class="flex items-center text-xl font-semibold focus:outline-hidden focus:opacity-80">
+  
           <div>
             <a class="eyes-container flex gap-2" href="#introduction" aria-label="Brand">
-              <svg width="50" height="50" class="eye">
-                <circle cx="25" cy="25" r="25" fill="white" class="eyeball" />
-                <circle cx="25" cy="25" r="10" fill="#0D0D20" class="pupil" />
+              <svg class="eye w-12 h-12 md:w-14 md:h-14 lg:w-14 lg:h-14">
+                <circle cx="50%" cy="50%" r="50%" fill="white" class="eyeball" />
+                <circle cx="50%" cy="50%" r="20%" fill="#0D0D20" class="pupil" />
               </svg>
-
-              <svg width="50" height="50" class="eye">
-                <circle cx="25" cy="25" r="25" fill="white" class="eyeball" />
-                <circle cx="25" cy="25" r="10" fill="#0D0D20" class="pupil" />
+  
+              <svg class="eye w-12 h-12 md:w-14 md:h-14 lg:w-14 lg:h-14">
+                <circle cx="50%" cy="50%" r="50%" fill="white" class="eyeball" />
+                <circle cx="50%" cy="50%" r="20%" fill="#0D0D20" class="pupil" />
               </svg>
             </a>
+  
           </div>
-
+  
           <h1
-            class="mx-2 animate-text bg-gradient-to-r from-lime-500 via-yellow-500 to-primary bg-clip-text text-transparent text-xl font-medium text-nowrap">
+            class="mx-2 animate-text bg-gradient-to-r from-lime-500 via-yellow-500 to-primary bg-clip-text text-transparent text-sm sm:text-xl font-medium text-nowrap">
             Where are you going?
           </h1>
-
+  
         </div>
-        <div class="sm:hidden">
+        <div class="md:hidden">
           <button type="button"
             class="hs-collapse-toggle relative size-9 flex justify-center items-center gap-x-2 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
             id="hs-navbar-example-collapse" aria-expanded="false" aria-controls="hs-navbar-example"
             aria-label="Toggle navigation" data-hs-collapse="#hs-navbar-example">
-            <svg class="hs-collapse-open:hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
-              height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            <svg class="hs-collapse-open:hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round">
               <line x1="3" x2="21" y1="6" y2="6" />
               <line x1="3" x2="21" y1="12" y2="12" />
@@ -88,13 +90,14 @@
     </nav>
   </header>
 
+
   <!-- Main Container -->
   <div class="p-8 md:p-12 lg:py-2 lg:px-[6rem]">
 
     <!-- About Me and Social Links -->
-    <section id="introduction" class="flex flex-col sm:flex-row min-h-screen] mb-4">
+    <section id="introduction" class="flex flex-col min-h-screen mb-4 sm:flex-row">
       <!-- Left Side -->
-      <div class="flex flex-col justify-start h-screen py-2 fade-in-section sm:py-[6rem] md:w-2/3">
+      <div class="flex flex-col justify-start h-screen py-2 fade-in-section text-center sm:text-left sm:py-[6rem] sm:w-full md:w-4/5 lg:w-3/4">
         <h2 class="font-bold text-8xl">
           Hi! I'm
           <span
@@ -120,7 +123,7 @@
 
         <!-- About Me -->
         <div class="description">
-          <p class="w-full md:w-full lg:w-1/2 font-light mt-8">
+          <p class="w-full md:w-full lg:w-2/3 font-light mt-8">
             I'm from the Philippines with a strong passion for intelligent
             systems and software development. I specialize in creating
             innovative solutions that address real-world challenges and
@@ -133,7 +136,7 @@
         </div>
 
         <!-- Social Links -->
-        <div class="social flex mt-[6rem]">
+        <div class="social flex mt-[6rem] justify-center sm:justify-start items-center sm:items-stajustify-start">
           <ul>
             <li>
               <a href="https://www.linkedin.com/in/daniel-valdez-5170a125a/">
@@ -148,17 +151,18 @@
             </li>
           </ul>
         </div>
+
       </div>
 
       <!-- Right Side (Blob) -->
-      <div class="blob-container hidden justify-center items-center min-h-screen sm:flex md:w-1/3">
+      <div class="blob-container hidden justify-center items-center min-h-screen sm:flex sm:w-full md:w-1/5 lg:w-1/4">
         <div id="blob"></div>
         <div id="blob-blur"></div>
       </div>
     </section>
 
     <!-- Tech Stack -->
-    <section class="flex flex-col min-h-screen mb-[6rem] pt-6 sm:items-center sm:justify-center md:items-center md:justify-center lg:items-start lg:justify-start"
+    <section class="flex flex-col min-h-screen mb-[6rem] pt-6 mt-[12rem] sm:items-center sm:justify-center md:items-center md:justify-center lg:items-start lg:justify-start"
       id="skills">
       <h2 class="font-bold text-3xl md:text-4xl lg:text-6xl text-center sm:text-left md:text-center">
         TECH <span class="text-primary">STACKS</span>
@@ -637,10 +641,10 @@
       <!-- Maintenance Status -->
       <div class="my-10 fade-in-section">
         <h1
-          class="relative w-full text-nowrap xl:text-6xl md:text-8xl text-sm sm:tracking-[17px] tracking-[10px] uppercase text-center leading-[0.70em] outline-none animate-dimlight box-reflect">
+          class="relative w-full text-nowrap xl:text-6xl md:text-3xl text-sm sm:tracking-[17px] tracking-[10px] uppercase text-center leading-[0.70em] outline-none animate-dimlight box-reflect">
           Status 501</h1>
         <h1
-          class="relative mt-5 w-full text-nowrap xl:text-6xl md:text-8xl text-sm sm:tracking-[17px] tracking-[10px] uppercase text-center leading-[0.70em] outline-none animate-dimlight box-reflect">
+          class="relative mt-5 w-full text-nowrap xl:text-6xl md:text-3xl text-sm sm:tracking-[17px] tracking-[10px] uppercase text-center leading-[0.70em] outline-none animate-dimlight box-reflect">
           In Progress</h1>
       </div>
 
@@ -665,24 +669,24 @@
       <!-- Maintenance Status -->
       <div class="my-10 fade-in-section">
         <h1
-          class="relative w-full text-nowrap xl:text-6xl md:text-8xl text-sm sm:tracking-[17px] tracking-[10px] uppercase text-center leading-[0.70em] outline-none animate-dimlight box-reflect">
+          class="relative w-full text-nowrap xl:text-6xl md:text-3xl text-sm sm:tracking-[17px] tracking-[10px] uppercase text-center leading-[0.70em] outline-none animate-dimlight box-reflect">
           Status 501</h1>
         <h1
-          class="relative mt-5 w-full text-nowrap xl:text-6xl md:text-8xl text-sm sm:tracking-[17px] tracking-[10px] uppercase text-center leading-[0.70em] outline-none animate-dimlight box-reflect">
+          class="relative mt-5 w-full text-nowrap xl:text-6xl md:text-3xl text-sm sm:tracking-[17px] tracking-[10px] uppercase text-center leading-[0.70em] outline-none animate-dimlight box-reflect">
           In Progress</h1>
       </div>
 
     </section>
-    
+
     <section class="min-h-screen fade-in-section mb-[6rem] pt-6" id="experience">
 
       <!-- Maintenance Status -->
       <div class="my-10 fade-in-section">
         <h1
-          class="relative w-full text-nowrap xl:text-6xl md:text-8xl text-sm sm:tracking-[17px] tracking-[10px] uppercase text-center leading-[0.70em] outline-none animate-dimlight box-reflect">
+          class="relative w-full text-nowrap xl:text-6xl md:text-3xl text-sm sm:tracking-[17px] tracking-[10px] uppercase text-center leading-[0.70em] outline-none animate-dimlight box-reflect">
           Status 501</h1>
         <h1
-          class="relative mt-5 w-full text-nowrap xl:text-6xl md:text-8xl text-sm sm:tracking-[17px] tracking-[10px] uppercase text-center leading-[0.70em] outline-none animate-dimlight box-reflect">
+          class="relative mt-5 w-full text-nowrap xl:text-6xl md:text-3xl text-sm sm:tracking-[17px] tracking-[10px] uppercase text-center leading-[0.70em] outline-none animate-dimlight box-reflect">
           In Progress</h1>
       </div>
 
@@ -693,10 +697,10 @@
       <!-- Maintenance Status -->
       <div class="my-10 fade-in-section">
         <h1
-          class="relative w-full text-nowrap xl:text-6xl md:text-8xl text-sm sm:tracking-[17px] tracking-[10px] uppercase text-center leading-[0.70em] outline-none animate-dimlight box-reflect">
+          class="relative w-full text-nowrap xl:text-6xl md:text-3xl text-sm sm:tracking-[17px] tracking-[10px] uppercase text-center leading-[0.70em] outline-none animate-dimlight box-reflect">
           Status 501</h1>
         <h1
-          class="relative mt-5 w-full text-nowrap xl:text-6xl md:text-8xl text-sm sm:tracking-[17px] tracking-[10px] uppercase text-center leading-[0.70em] outline-none animate-dimlight box-reflect">
+          class="relative mt-5 w-full text-nowrap xl:text-6xl md:text-3xl text-sm sm:tracking-[17px] tracking-[10px] uppercase text-center leading-[0.70em] outline-none animate-dimlight box-reflect">
           In Progress</h1>
       </div>
 
