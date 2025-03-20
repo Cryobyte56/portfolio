@@ -2,15 +2,16 @@
 document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".nav-link");
+  const headerHeight = document.querySelector("header")?.offsetHeight || 80; 
 
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // Remove active class from all links
+          // Remove Active Link Styling
           navLinks.forEach((link) => link.classList.remove("active"));
 
-          // Find the corresponding nav link and add the active class
+          // Find and Activate Link Style
           const activeLink = document.querySelector(
             `.nav-link[href="#${entry.target.id}"]`
           );
@@ -20,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     },
-    { threshold: 0.6 } // 60% of the section must be visible
+    { threshold: 0.5 } // 50% of the section must be visible
   );
 
   sections.forEach((section) => observer.observe(section));
@@ -42,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   fadeSections.forEach((section) => fadeObserver.observe(section));
 
-  // Smooth Scrolling on Navbar Click
+  // Smooth Scrolling on Navbar Click with Header Offset
   navLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault(); // Prevent default anchor jump
@@ -50,10 +51,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const targetSection = document.getElementById(targetId);
 
       if (targetSection) {
-        targetSection.scrollIntoView({ behavior: "smooth" });
+        const yOffset = -headerHeight - 20;
+        const y =
+          targetSection.getBoundingClientRect().top + window.scrollY + yOffset;
+
+        window.scrollTo({ top: y, behavior: "smooth" });
       }
     });
   });
 });
-
-
