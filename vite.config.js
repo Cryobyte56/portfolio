@@ -3,7 +3,8 @@ import { defineConfig } from "vite";
 export default defineConfig({
   base: "/",
   build: {
-    outDir: "dist", 
-    emptyOutDir: true, 
+    outDir: "dist",
+    emptyOutDir: true,
+    assetsDir: "javascripts",
   },
 });
