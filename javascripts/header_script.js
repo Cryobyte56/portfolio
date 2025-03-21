@@ -81,4 +81,5 @@ document.addEventListener("DOMContentLoaded", () => {
       isMobileView() ? "Mobile" : "Desktop"
     );
   });
+
 });

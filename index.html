@@ -26,10 +26,14 @@
 
 <body class="bg-black text-white">
 
-  <!-- Header Navbar -->
+  <!-- Header -->
   <header class="sticky top-0 z-50 flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-black text-sm py-5 shadow-md">
+
+    <!-- Navbar -->
     <nav class="max-w-[85rem] w-full mx-auto sm:flex sm:items-center sm:justify-between">
       <div class="flex items-center justify-between px-5">
+        
+        <!-- Left Section (Eyes and Texts) -->
         <div class="flex items-center text-xl font-semibold focus:outline-hidden focus:opacity-80">
   
           <div>
@@ -53,24 +57,18 @@
           </h1>
   
         </div>
+
+        <!-- Links -->
         <div class="md:hidden">
           <button type="button"
-            class="hs-collapse-toggle relative size-9 flex justify-center items-center gap-x-2 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
+            class="hs-collapse-toggle animate-gradient-move relative size-9 flex justify-center items-center gap-x-2 rounded-lg bg-[linear-gradient(to_right,#aaff00,#39ff14,#ffff00)] text-gray-800 shadow-2xs hover:animate-gradient-move focus:animate-gradient-move disabled:opacity-50 disabled:pointer-events-none overflow-hidden"
             id="hs-navbar-example-collapse" aria-expanded="false" aria-controls="hs-navbar-example"
             aria-label="Toggle navigation" data-hs-collapse="#hs-navbar-example">
-            <svg class="hs-collapse-open:hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <line x1="3" x2="21" y1="6" y2="6" />
-              <line x1="3" x2="21" y1="12" y2="12" />
-              <line x1="3" x2="21" y1="18" y2="18" />
-            </svg>
-            <svg class="hs-collapse-open:block hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
-              height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path d="M18 6 6 18" />
-              <path d="m6 6 12 12" />
-            </svg>
+          <svg class="w-6 h-6 text-gray-800" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M3 5h14a1 1 0 100-2H3a1 1 0 100 2zm0 6h14a1 1 0 100-2H3a1 1 0 100 2zm0 6h14a1 1 0 100-2H3a1 1 0 100 2z"
+              clip-rule="evenodd"></path>
+          </svg>
             <span class="sr-only">Toggle navigation</span>
           </button>
         </div>
@@ -78,7 +76,7 @@
       <div id="hs-navbar-example"
         class="hidden hs-collapse overflow-hidden transition-all duration-300 basis-full grow sm:block"
         aria-labelledby="hs-navbar-example-collapse">
-        <div class="flex flex-col gap-8 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5">
+        <div class="flex flex-col gap-8 mt-5 pl-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5">
           <a class="nav-link font-medium text-white hover:text-primary" href="#introduction">About Me</a>
           <a class="nav-link font-medium text-white hover:text-primary" href="#skills">Skills</a>
           <a class="nav-link font-medium text-white hover:text-primary" href="#projects">Projects</a>
