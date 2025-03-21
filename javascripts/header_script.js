@@ -3,12 +3,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(".nav-link");
   const header = document.querySelector("header");
   const navToggle = document.querySelector("#hs-navbar-example-collapse");
+  const menuIcon = document.getElementById("menu_icon");
 
   // Function to check if the view is mobile
-  const isMobileView = () => window.innerWidth <= 768; // Adjust breakpoint as needed
+  const isMobileView = () => window.innerWidth <= 768; 
 
   // Get dynamic header height
   const getHeaderHeight = () => (header ? header.offsetHeight : 80);
+
+  navToggle.addEventListener("click", () => {
+    const isOpen = !navMenu.classList.contains("hidden");
+
+    if (isOpen) {
+      navMenu.classList.add("hidden"); // Close menu
+      menuIcon.classList.remove("rotate-45"); // Reset icon
+    } else {
+      navMenu.classList.remove("hidden"); // Open menu
+      menuIcon.classList.add("rotate-45"); // Rotate icon
+    }
+  });
 
   // Intersection Observer for Active Link Highlighting
   const observer = new IntersectionObserver(
