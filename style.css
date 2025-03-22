@@ -27,7 +27,7 @@ body {
   right: 5px;
   bottom: 5px;
   left: 5px;
-  background-image: url(https://github.com/Cryobyte56/ck_images/blob/main/IMG_4909.JPG?raw=true);
+  background-image: url('src/ck.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -118,6 +118,7 @@ body {
 }
 /* End of Blobs */
 
+/* Dynamic Sizing of Tech Stack Section */
 @media only screen and (max-width: 640px) {
   .logos img {
     max-width: 50px;
