@@ -15,6 +15,7 @@
     "vite": "^6.2.2"
   },
   "dependencies": {
+    "@preline/accordion": "^3.0.0",
     "@preline/carousel": "^3.0.0",
     "@preline/collapse": "^3.0.0",
     "@preline/layout-splitter": "^3.0.0",
